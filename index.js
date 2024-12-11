@@ -38,3 +38,44 @@ var iva = 0.22;
 var addIVA = function (p) { return p + p * iva; };
 console.log(addIVA(100));
 // 6) Crea una funzione che concateni due stringhe e restituisca la lunghezza totale.
+var concatStrings = function (str1, str2) { return str1 + str2; };
+console.log(concatStrings('Ciao a', ' tutti'));
+// 7) Cos'è un Type Union e come si scrive?
+//Da typescript.org:A union type is a type formed from two or more other types, representing values that may be any one of those types.
+// We refer to each of these types as the union’s members.
+// ovvero è un modo per  combinare insieme due tipi di types. Il valore può essere uno qualsiasi di questi types ed è detto 'union's members'
+// si usa | per separe i types.
+var textNuberBoolean = function (exemple) {
+    console.log(exemple);
+};
+textNuberBoolean('Una stringa');
+textNuberBoolean(2025);
+textNuberBoolean(true);
+// 8) Crea una variabile che possa contenere un numero, null o undefined.
+var myVariable; //let perhè ho cambiato il valore 3 volte nelle righe successive
+myVariable = 1;
+myVariable = null;
+myVariable = undefined;
+var today;
+//today può essere solo uno dei giorni della settimana
+// 10) Tipizza il seguente array di numeri nei due modi possibili:
+// const numbers = [1, 2, 3]
+var array = [1, 2, 3];
+var newArray = [1, 2, 3];
+//12) Qual è la differenza tra type e interface?
+//Sono due modi per definire tipi personalizzati
+// Hanno una diversa sintassi 
+// interface Person {
+//   name: string;
+//   age: number;
+// }
+//interface serve a definire un OGGETTO o una CLASSE.
+//interface non supporta le union type
+// interface può essere estesa 
+//type può rappresentare anche altri valori 
+// type Person = {
+//     name: string;
+//     age: number;
+//   };
+//   type StringOrNumber = string | number;
+//13) Definisce un'interfaccia in TypeScript per un oggetto dotato di proprietà "firstname", "lastname", e "age".
